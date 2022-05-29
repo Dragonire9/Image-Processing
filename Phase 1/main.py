@@ -9,11 +9,11 @@ import globals
 import sys
 
 globals.init()
-deb=input("please enter 0 for final result, 1 for debugging mode\n")
-deb=int(deb)
+deb=input("for final result please press f ,\t for debugging mode press d \n")
+#deb=int(deb)
 
-workMode=input("please enter 0 for photo, 1 for video\n")
-workMode=int(workMode)
+workMode=input("for photo press p ,\t for video press v \n")
+#workMode=int(workMode)
 ##selecting work mode photo=1 or video=0
 #cap=cv2.VideoCapture("project_video.mp4")
 
@@ -25,7 +25,7 @@ workMode=int(workMode)
 #location1='E:\\4th Mechatronics\\2nd term\\image processing\\Project_data\\ppp_video.mp4'
 #locationPhoto='E:\\4th Mechatronics\\2nd term\\image processing\\Project_data\\test_images\\test3.jpg'
 
-if workMode ==1:
+if workMode == "v":
     locationVideo=input("please enter the complete path of the video\n")
 
     cap=cv2.VideoCapture(locationVideo)
@@ -64,7 +64,7 @@ if workMode ==1:
     #out.release()
     cv2.destroyAllWindows()
 
-elif workMode ==0:
+elif workMode == "p":
     locationPhoto=input("please enter the complete path of the photo\n")
 
 
